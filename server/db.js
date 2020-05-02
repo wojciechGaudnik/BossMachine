@@ -238,7 +238,7 @@ const updateInstanceInDatabase = (modelType, instance) => {
   }
 }
 
-const deleteFromDatabasebyId = (modelType, id) => {
+const deleteFromDatabaseById = (modelType, id) => {
   const model = findDataArrayByName(modelType);
   if (model === null) {
     return null;
@@ -269,6 +269,6 @@ module.exports = {
   getFromDatabaseById,
   addToDatabase,
   updateInstanceInDatabase,
-  deleteFromDatabasebyId,
+  deleteFromDatabaseById,
   deleteAllFromDatabase,
 };
