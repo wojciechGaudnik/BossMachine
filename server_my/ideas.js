@@ -1,4 +1,5 @@
 const ideasRouter = require('express').Router();
+const checkMillionDollarIdea = require('./checkMillionDollarIdea');
 
 module.exports = ideasRouter;
 
@@ -28,12 +29,12 @@ ideasRouter.get('/:ideasId',  (req, res) => {
     res.send(req.minion);
 })
 
-ideasRouter.post('/',  (req, res) => {
+ideasRouter.post('/',  checkMillionDollarIdea, (req, res) => {
     const newMinion = addToDatabase('ideas', req.body);
     res.status(201).send(newMinion);
 });
 
-ideasRouter.put('/:ideasId', (req, res) => {
+ideasRouter.put('/:ideasId', checkMillionDollarIdea, (req, res) => {
     let updateMinionInstance = updateInstanceInDatabase('ideas', req.body);
     res.send(updateMinionInstance);
 })

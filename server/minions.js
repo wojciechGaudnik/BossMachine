@@ -48,6 +48,8 @@ minionsRouter.delete('/:minionId', (req, res, next) => {
   res.send();
 });
 
+
+
 minionsRouter.get('/:minionId/work', (req, res, next) => {
   const work = getAllFromDatabase('work').filter((singleWork) => {
     return singleWork.minionId === req.params.minionId;
