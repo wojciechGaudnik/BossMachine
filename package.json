@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "cross-env PORT=8000 mocha --watch",
-    "start-dev": "webpack -w & nodemon --watch server.js --watch server/",
-    "start": "nodemon --watch server.js --watch server/",
+    "start-dev": "webpack -w & nodemon --watch server.js --watch server_my/",
+    "start": "nodemon --watch server.js --watch server_my/",
     "postinstall": "webpack"
   },
   "author": "Codecademy",
